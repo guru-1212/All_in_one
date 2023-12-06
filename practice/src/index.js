@@ -9,7 +9,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import Footer from './components/footer/Footer';
-import MainRender from './components/Main_render_body/Main_Render';
+import MainRender from './components/Main_render_body/MainRender';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
