@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.router_container{
+    min-height: calc(100vh - 180px);
+}
+.navbar{
+  position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.nav-link.active{
+  color: red !important;
+  text-decoration: underline;
+}
+.nav-link:hover{
+  text-decoration: underline;
+  text-decoration-color: red;
+}

@@ -1,52 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Guru from './components/ForGuru/Guru'
-import Suraj from './components/ForSuraj/Suraj'
-import Pravin from './components/ForPravin/Pravin'
-import Vishal from './components/ForVishal/Vishal'
-import Arvind from './components/ForArvind/Arvind'
-import HomePage from './components/Home/Home'
+
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter,
 } from "react-router-dom";
-const router = createBrowserRouter([
-  {
-    path: "/Guru",
-    element: <Guru/>,
-  },
-  {
-    path: "/Suraj",
-    element: <Suraj/>,
-  },
-  {
-    path: "/Pravin",
-    element: <Pravin/>,
-  },
-  {
-    path: "/Arvind",
-    element: <Arvind/>,
-  },
-  {
-    path: "/Vishal",
-    element: <Vishal/>,
-  },
-  {
-    path: "/Home",
-    element: <HomePage/>,
-  },
-]);
+import Footer from './components/footer/Footer';
+import MainRender from './components/Main_render_body/Main_Render';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
+
+  <div className='router_container'>
+  <BrowserRouter>
     <Header/>
-    <RouterProvider router={router} />
+      <MainRender/>
+    </BrowserRouter>
+  </div>
+    <Footer/>
+    {/* <RouterProvider router={router} /> */}
   </React.StrictMode>
 );
 
