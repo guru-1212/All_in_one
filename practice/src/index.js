@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   BrowserRouter,
@@ -17,7 +17,7 @@ root.render(
 
   <div className='router_container'>
   <BrowserRouter>
-    <Header/>
+      <Header/>
       <MainRender/>
     </BrowserRouter>
   </div>
