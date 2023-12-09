@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./FetchData.css"
+import CartItem from "./CartItmes";
 
 const FetchData = () => {
     const [Data, setData] = useState([]);
@@ -94,7 +95,7 @@ const FetchData = () => {
                         })
                     }
             </div>
-
+            <CartItem cart={cartItem} />        
         </div>
     );
 }
