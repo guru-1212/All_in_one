@@ -1,0 +1,14 @@
+#increase , #decrease{
+    border-radius: 50%;
+    border: unset;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+#increase:disabled , #decrease:disabled{
+    background-color: grey !important;
+}

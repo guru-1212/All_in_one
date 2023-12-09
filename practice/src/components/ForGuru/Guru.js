@@ -1,46 +1,27 @@
-import React, { useEffect, useState } from "react";
-const Guru = () => {
-    const [Data, setData] = useState([]);
-  
-    useEffect(() => {
-        fetch("https://dummyjson.com/products")
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setData(data.products);
-            });
-    }, []);
+import FetchData from "./FetchData/FetchData";
+import "../ForGuru/Guru.css";
+import EventHandle from "./EventS/EventHandle";
 
-    return (
-        <div className="container">
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>TITLE</th>
-                        <th>DESCRIPTION</th>
-                        <th>PRICE</th>
-                        <th>PHOTO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        Data.map((productDetail)=>{
-                            return(
-                                <tr>
-                                <td>{productDetail.id}</td>
-                                <td>{productDetail.title}</td>
-                                <td>{productDetail.description}</td>
-                                <td>{productDetail.price}</td>
-                                <td><img className="img_width" src={productDetail.thumbnail}></img></td>
-                            </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
-        </div>
-    );
+const Guru = () => {
+   return(
+    <>
+       <nav className="text-center guru_navbar"> 
+          <ul className="d-flex">
+            <li  className="me-2 ms-3">  
+                <a href="#fetch_data">Fetch Data</a>
+            </li>
+           <li  className="me-2 ms-3">
+              <a href="#Event_handling"> Event handlign</a>
+           </li>
+          
+          </ul>
+        </nav>
+        <h1 className="text-center text-success mt-2 mb-2" id="fetch_data">--- Fetch data and shown in Table ---</h1>
+        <FetchData/>
+        <hr/>
+        <h1 className="text-center text-success mt-2 mb-2" id="Event_handling">--- Event handlign practice ---</h1>
+       <EventHandle/>
+    </>
+   )
 }
 export default Guru;
