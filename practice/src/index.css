@@ -27,3 +27,7 @@ code {
   text-decoration: underline;
   text-decoration-color: red;
 }
+.img_width{
+  height: 100px;
+  width: 100px;
+}
