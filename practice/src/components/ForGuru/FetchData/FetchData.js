@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./FetchData.css"
+import "./FetchData.css";
 import CartItem from "./CartItmes";
 
 const FetchData = () => {
@@ -16,9 +16,9 @@ const FetchData = () => {
                 setData(data.products);
             });
     }, []);
-    useEffect(() => {
-        console.log(cartItem);
-    }, [cartItem]);
+    // useEffect(() => {
+    //     console.log(cartItem);
+    // }, [cartItem]);
 
     function getProductDetail(productDetail) {
         var selectedData = {
@@ -30,6 +30,9 @@ const FetchData = () => {
         };
         setCartItem((prevCartItem) => [...prevCartItem, selectedData])
 
+    }
+    function removeItemClick(e){
+        setCartItem((prevCartItem)=>prevCartItem.filter(item=>item.productid !== e))
     }
 
     return (
@@ -73,8 +76,21 @@ const FetchData = () => {
                                 <>
                                     <div className="card w-25 me-2 ms-2 mb-2">
                                         <div className="card-header">
+
+
+
+
                                             <dt>Brand - {cartData.productbrand}</dt>
+                                            <button onClick={()=>removeItemClick(cartData.productid)}>Remove item</button>
+                                     
+                                     
+                                     
+                                     
+                                     
                                         </div>
+
+
+
                                         <div className="card-body">
                                             <div className="text-center mb-2">
                                                 <img src={cartData.productImage} style={{width:"200px",height:"200px"}}></img>
@@ -95,7 +111,7 @@ const FetchData = () => {
                         })
                     }
             </div>
-            <CartItem cart={cartItem} />        
+              
         </div>
     );
 }
