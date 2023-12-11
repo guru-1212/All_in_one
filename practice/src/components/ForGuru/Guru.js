@@ -1,6 +1,7 @@
 import FetchData from "./FetchData/FetchData";
 import "../ForGuru/Guru.css";
 import EventHandle from "./EventS/EventHandle";
+import ToDoList from "./ToDo_list/ToDoList";
 
 const Guru = () => {
    return(
@@ -13,6 +14,9 @@ const Guru = () => {
            <li  className="me-2 ms-3">
               <a href="#Event_handling"> Event handlign</a>
            </li>
+           <li  className="me-2 ms-3">
+              <a href="#Event_handling"> To Do List</a>
+           </li>
           
           </ul>
         </nav>
@@ -21,6 +25,9 @@ const Guru = () => {
         <hr/>
         <h1 className="text-center text-success mt-2 mb-2" id="Event_handling">--- Event handlign practice ---</h1>
        <EventHandle/>
+        <h1 className="text-center text-success mt-2 mb-2" id="Event_handling">--- To Do List ---</h1>
+       <ToDoList/>
+
     </>
    )
 }

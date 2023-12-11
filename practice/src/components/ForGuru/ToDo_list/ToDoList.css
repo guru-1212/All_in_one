@@ -1,0 +1,17 @@
+#addedList{
+    width: 700px;
+    padding: 0;
+    margin: 0;
+    background: orange;
+    text-decoration-style: none;
+    /* text-decoration: unset !important; */
+    list-style-type: none;
+    text-align: center;
+}
+#addedList li{
+    padding: 10px;
+}
+#delete_btn,#edit_btn{
+    border: unset;
+    background-color: unset;
+}

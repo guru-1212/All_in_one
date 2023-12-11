@@ -22,6 +22,7 @@ const FetchData = () => {
 
     function getProductDetail(productDetail) {
         var selectedData = {
+              internalID : Math.random().toString(36).substr(2, 9),
               productid :  productDetail.id,
               producttitle :  productDetail.title,
               productprice :  productDetail.price,
@@ -32,7 +33,7 @@ const FetchData = () => {
 
     }
     function removeItemClick(e){
-        setCartItem((prevCartItem)=>prevCartItem.filter(item=>item.productid !== e))
+        setCartItem((prevCartItem)=>prevCartItem.filter(item=>item.internalID !== e))
     }
 
     return (
@@ -81,7 +82,7 @@ const FetchData = () => {
 
 
                                             <dt>Brand - {cartData.productbrand}</dt>
-                                            <button onClick={()=>removeItemClick(cartData.productid)}>Remove item</button>
+                                            <button onClick={()=>removeItemClick(cartData.internalID)}>Remove item</button>
                                      
                                      
                                      
