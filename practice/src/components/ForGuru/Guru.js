@@ -5,10 +5,12 @@ import ToDoList from "./ToDo_list/ToDoList";
 import Hooks from "./FetchData/Hooks/Hooks";
 import DataProvider from "./context/DataProvider";
 import ReferenceHook from "./USEREFERENCE/UseReference";
+import Header from "../header/Header";
 
 const Guru = () => {
    return(
     <>
+      <Header/>
        <nav className="text-center guru_navbar"> 
           <ul className="d-flex">
             <li  className="me-2 ms-3">  

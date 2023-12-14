@@ -7,7 +7,7 @@ const SecondChildForRef = React.memo((props) => {
     const  changedValue = useCallback(()=> {   
         setUpdateVal(textareaRefVal.current.value)
     })
-    console.log(updateVal);
+    // console.log(updateVal);
    
     return (
         <>
@@ -18,7 +18,5 @@ const SecondChildForRef = React.memo((props) => {
 
     )
 })
-
-
 
 export default SecondChildForRef
