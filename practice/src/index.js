@@ -18,7 +18,6 @@ root.render(
 
   <div className='router_container'>
   <BrowserRouter>
-      <Header/>
       <MainRender/>
     </BrowserRouter>
   </div>

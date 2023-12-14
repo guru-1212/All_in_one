@@ -1,8 +1,10 @@
 import React from "react";
 import '../Home/Home.css'
+import Header from "../header/Header";
 const HomePage = () =>{
     return(
         <>
+              <Header/>
             <h1 className="text-center">React Practice</h1>
             <div className="d-flex justify-content-center">
                 <p className="text-center">

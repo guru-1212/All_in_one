@@ -11,7 +11,7 @@ const Navbar = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
+                    <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                  <NavLink className="nav-link" to={`/Guru`}>Guru</NavLink> 
@@ -26,6 +26,7 @@ const Navbar = () => {
                                 <NavLink className="nav-link"to={`/Pravin`}>Pravin</NavLink>
                             </li>
                         </ul>
+                        <NavLink className="nav-link" to={'/signin'}>LOGOUT</NavLink>
                     </div>
                 </div>
             </nav>
