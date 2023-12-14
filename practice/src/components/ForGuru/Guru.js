@@ -2,6 +2,9 @@ import FetchData from "./FetchData/FetchData";
 import "../ForGuru/Guru.css";
 import EventHandle from "./EventS/EventHandle";
 import ToDoList from "./ToDo_list/ToDoList";
+import Hooks from "./FetchData/Hooks/Hooks";
+import DataProvider from "./context/DataProvider";
+import ReferenceHook from "./USEREFERENCE/UseReference";
 
 const Guru = () => {
    return(
@@ -15,7 +18,13 @@ const Guru = () => {
               <a href="#Event_handling"> Event handlign</a>
            </li>
            <li  className="me-2 ms-3">
-              <a href="#Event_handling"> To Do List</a>
+              <a href="#To_Do_List"> To Do List</a>
+           </li>
+           <li  className="me-2 ms-3">
+              <a href="#Hooks"> Hooks</a>
+           </li>
+           <li  className="me-2 ms-3">
+              <a href="#use_reference_Hook"> use reference Hook</a>
            </li>
           
           </ul>
@@ -25,9 +34,16 @@ const Guru = () => {
         <hr/>
         <h1 className="text-center text-success mt-2 mb-2" id="Event_handling">--- Event handlign practice ---</h1>
        <EventHandle/>
-        <h1 className="text-center text-success mt-2 mb-2" id="Event_handling">--- To Do List ---</h1>
+        <h1 className="text-center text-success mt-2 mb-2" id="To_Do_List">--- To Do List ---</h1>
        <ToDoList/>
+        <h1 className="text-center text-success mt-2 mb-2" id="Hooks">--- Hooks ---</h1>
 
+      <DataProvider>
+         <Hooks></Hooks>
+      </DataProvider>
+
+      <h1 className="text-center text-success mt-2 mb-2" id="use_reference_Hook">--- Use Reference Hook ---</h1>
+      <ReferenceHook/>
     </>
    )
 }

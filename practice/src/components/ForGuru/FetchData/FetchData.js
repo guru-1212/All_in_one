@@ -1,12 +1,14 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState ,useEffect } from "react";
 import "./FetchData.css";
-import CartItem from "./CartItmes";
+// import CartItem from "./CartItmes";
+import useFetch from "../customeHooks/useFetch";
 
 const FetchData = () => {
     const [Data, setData] = useState([]);
     const [cartItem, setCartItem] = useState([]);
-
+    // const initiolData = useFetch("https://dummyjson.com/products");
+    // const Data = initiolData.products;
     useEffect(() => {
         fetch("https://dummyjson.com/products")
             .then((response) => {
@@ -51,14 +53,14 @@ const FetchData = () => {
                 </thead>
                 <tbody>
                     {
-                        Data.map((productDetail) => {
+                        Data?.map((productDetail,index) => {
                             return (
-                                <tr>
-                                    <td>{productDetail.id}</td>
+                                <tr key={index}>
+                                    <td >{productDetail.id}</td>
                                     <td>{productDetail.title}</td>
                                     <td>{productDetail.description}</td>
                                     <td>{productDetail.price}</td>
-                                    <td><img className="img_width" src={productDetail.thumbnail}></img></td>
+                                    <td><img className="img_width" src={productDetail.thumbnail} alt="img_not_loaded"></img></td>
                                     <td><button onClick={() => getProductDetail(productDetail)} className="btn btn-outline-success">Buy Now</button></td>
                                 </tr>
                             )
@@ -77,24 +79,12 @@ const FetchData = () => {
                                 <>
                                     <div className="card w-25 me-2 ms-2 mb-2">
                                         <div className="card-header">
-
-
-
-
                                             <dt>Brand - {cartData.productbrand}</dt>
                                             <button onClick={()=>removeItemClick(cartData.internalID)}>Remove item</button>
-                                     
-                                     
-                                     
-                                     
-                                     
                                         </div>
-
-
-
                                         <div className="card-body">
                                             <div className="text-center mb-2">
-                                                <img src={cartData.productImage} style={{width:"200px",height:"200px"}}></img>
+                                                <img  alt="img_not_loaded" src={cartData.productImage} style={{width:"200px",height:"200px"}}></img>
                                             </div>
                                             <div className="d-flex justify-content-between">
                                                 <dt>ID</dt><dt className="text-right">{cartData.productid}</dt>

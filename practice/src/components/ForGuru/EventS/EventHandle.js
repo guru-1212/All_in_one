@@ -20,9 +20,9 @@ const EventHandle = () =>{
         }
       }
 
-      function updateValue(){
+      // function updateValue(){
 
-      }
+      // }
     return(
        <>
          <div className="container">
@@ -30,7 +30,7 @@ const EventHandle = () =>{
                 <span>After clicking on button button event working alert</span> &nbsp; <button className="border-1" onClick={ButtonClick}>Click me </button>
             </div>
            <div className="mt-2 mb-2">
-              <spa>select number of items</spa>  <button onClick={setTheCount} id="increase" disabled={initialCount >= 5 }>+</button> <span>{initialCount}</span> <button onClick={setTheCount} id="decrease" disabled={initialCount <= 0} > - </button> 
+              <span>select number of items</span>  <button onClick={setTheCount} id="increase" disabled={initialCount >= 5 }>+</button> <span>{initialCount}</span> <button onClick={setTheCount} id="decrease" disabled={initialCount <= 0} > - </button> 
            </div>
         </div>
        </>

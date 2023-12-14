@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./ToDoList.css"
 const ToDoList = () =>{
     const [product , setProducts] = useState([]);
@@ -11,7 +11,7 @@ const ToDoList = () =>{
         var fruitP =     document.getElementById("FPrice").value;
         var fruitD =     document.getElementById("FDescription").value;
 
-        if( fruitN == "" | fruitD == "" | fruitP == ""){
+        if( fruitN === "" | fruitD === "" | fruitP === ""){
             alert("plz enter all data")
         }
         else{
@@ -44,9 +44,9 @@ const ToDoList = () =>{
              <div>
                 <div>
                     <h5>Enter Fruit Description</h5>
-                    <input className="form-control mt-1 mb-1" id="FName" name="FName" required placeholder=" Name" type="text" value={edit.FN || ""}></input>
-                    <input  className="form-control mt-1 mb-1" id="FPrice" name="FName" required placeholder="Price" type="number" value={edit.FP} ></input>
-                    <input  className="form-control mt-1 mb-1" id="FDescription" name="FName" required placeholder=" Descriptioin" type="text" value={edit.FD}></input>
+                    <input className="form-control mt-1 mb-1" id="FName" name="FName" required placeholder=" Name" type="text"></input>
+                    <input  className="form-control mt-1 mb-1" id="FPrice" name="FName" required placeholder="Price" type="number"></input>
+                    <input  className="form-control mt-1 mb-1" id="FDescription" name="FName" required placeholder=" Descriptioin" type="text"></input>
                     <button onClick={addClick} id="SubmitFruit" className="btn btn-outline-success text-center">Add your Fruit</button>
                 </div>
             </div>
