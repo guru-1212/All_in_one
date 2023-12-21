@@ -36,6 +36,9 @@ const ToDoList = () =>{
 
     const editItem = (e) =>{
         setEditItems(e)
+        edit.FD="";
+        edit.FN=""
+        edit.FP = ""
         console.log(edit)
     }
 
@@ -44,9 +47,9 @@ const ToDoList = () =>{
              <div>
                 <div>
                     <h5>Enter Fruit Description</h5>
-                    <input className="form-control mt-1 mb-1" id="FName" name="FName" required placeholder=" Name" type="text"></input>
-                    <input  className="form-control mt-1 mb-1" id="FPrice" name="FName" required placeholder="Price" type="number"></input>
-                    <input  className="form-control mt-1 mb-1" id="FDescription" name="FName" required placeholder=" Descriptioin" type="text"></input>
+                    <input className="form-control mt-1 mb-1" id="FName" name="FName" required placeholder=" Name" type="text" value={edit.FN}></input>
+                    <input  className="form-control mt-1 mb-1" id="FPrice" name="FName" required placeholder="Price" type="number" value={edit.FP}></input>
+                    <input  className="form-control mt-1 mb-1" id="FDescription" name="FName" required placeholder=" Descriptioin" type="text" value={edit.FD}></input>
                     <button onClick={addClick} id="SubmitFruit" className="btn btn-outline-success text-center">Add your Fruit</button>
                 </div>
             </div>
